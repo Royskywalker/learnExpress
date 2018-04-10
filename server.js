@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(multer({ dest: "/tmp/" }).array("image"));
 
 app.get("/index.html", function(req, res) {
+    //_dirname相当于根目录，但是不能去掉直接以/开头
     res.sendFile(__dirname + "/" + "index.html");
 });
 
